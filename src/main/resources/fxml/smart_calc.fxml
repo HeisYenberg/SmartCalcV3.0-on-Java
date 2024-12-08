@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<GridPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity"
+  maxWidth="-Infinity" minHeight="-Infinity"
+  minWidth="-Infinity" prefHeight="427.0" prefWidth="807.0"
+  styleClass="root" stylesheets="@../css/smart_calc.css"
+  xmlns="http://javafx.com/javafx/8"
+  fx:controller="edu.school21.butterba.smartcalc.view.controllers.SmartCalcController">
+  <Button GridPane.rowIndex="1" mnemonicParsing="false"
+    onMouseClicked="#onDigitClicked" prefHeight="61.0" prefWidth="81.0"
+    styleClass="operations-button" stylesheets="@../css/smart_calc.css" text="x">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.rowIndex="2" mnemonicParsing="false"
+    onMouseClicked="#onCleanClicked" prefHeight="61.0" prefWidth="81.0"
+    styleClass="operations-button" stylesheets="@../css/smart_calc.css" text="C">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="1" GridPane.rowIndex="2"
+    mnemonicParsing="false" onMouseClicked="#onOperatorClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="operations-button"
+    stylesheets="@../css/smart_calc.css"
+    text="mod">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="2" GridPane.rowIndex="2"
+    mnemonicParsing="false" onMouseClicked="#onOperatorClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="operations-button"
+    stylesheets="@../css/smart_calc.css"
+    text="pow">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="3" GridPane.rowIndex="2"
+    mnemonicParsing="false" onMouseClicked="#onOperatorClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="operations-button"
+    stylesheets="@../css/smart_calc.css"
+    text="(">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="5" GridPane.rowIndex="2"
+    mnemonicParsing="false" onMouseClicked="#onDelClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="operations-button"
+    stylesheets="@../css/smart_calc.css"
+    text="⌫">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="4" GridPane.rowIndex="2"
+    mnemonicParsing="false" onMouseClicked="#onOperatorClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="operations-button"
+    stylesheets="@../css/smart_calc.css"
+    text=")">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.rowIndex="5" mnemonicParsing="false"
+    onMouseClicked="#onFunctionClicked" prefHeight="61.0" prefWidth="81.0"
+    styleClass="operations-button" stylesheets="@../css/smart_calc.css"
+    text="tan">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="2" GridPane.rowIndex="3"
+    mnemonicParsing="false" onMouseClicked="#onFunctionClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="operations-button"
+    stylesheets="@../css/smart_calc.css"
+    text="ln">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="1" GridPane.rowIndex="4"
+    mnemonicParsing="false" onMouseClicked="#onFunctionClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="operations-button"
+    stylesheets="@../css/smart_calc.css"
+    text="asin">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.rowIndex="4" mnemonicParsing="false"
+    onMouseClicked="#onFunctionClicked" prefHeight="61.0" prefWidth="81.0"
+    styleClass="operations-button" stylesheets="@../css/smart_calc.css"
+    text="sin">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="1" GridPane.rowIndex="3"
+    mnemonicParsing="false" onMouseClicked="#onFunctionClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="operations-button"
+    stylesheets="@../css/smart_calc.css"
+    text="acos">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.rowIndex="3" mnemonicParsing="false"
+    onMouseClicked="#onFunctionClicked" prefHeight="61.0" prefWidth="81.0"
+    styleClass="operations-button" stylesheets="@../css/smart_calc.css"
+    text="cos">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="5" GridPane.rowIndex="3"
+    mnemonicParsing="false" onMouseClicked="#onDigitClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="digits-button"
+    stylesheets="@../css/smart_calc.css"
+    text="9">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="3" GridPane.rowIndex="6"
+    mnemonicParsing="false" onMouseClicked="#onDigitClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="digits-button"
+    stylesheets="@../css/smart_calc.css"
+    text="e">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="2" GridPane.rowIndex="6" mnemonicParsing="false"
+    onMouseClicked="#onGraphClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="action-button"
+    stylesheets="@../css/smart_calc.css" text="graph">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="3" GridPane.rowIndex="5"
+    mnemonicParsing="false" onMouseClicked="#onDigitClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="digits-button"
+    stylesheets="@../css/smart_calc.css"
+    text="1">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="2" GridPane.rowIndex="5"
+    mnemonicParsing="false" onMouseClicked="#onFunctionClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="operations-button"
+    stylesheets="@../css/smart_calc.css"
+    text="sqrt">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="3" GridPane.rowIndex="4"
+    mnemonicParsing="false" onMouseClicked="#onDigitClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="digits-button"
+    stylesheets="@../css/smart_calc.css"
+    text="4">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="3" GridPane.rowIndex="3"
+    mnemonicParsing="false" onMouseClicked="#onDigitClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="digits-button"
+    stylesheets="@../css/smart_calc.css"
+    text="7">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="2" GridPane.rowIndex="4"
+    mnemonicParsing="false" onMouseClicked="#onFunctionClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="operations-button"
+    stylesheets="@../css/smart_calc.css"
+    text="log">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="1" GridPane.rowIndex="5"
+    mnemonicParsing="false" onMouseClicked="#onFunctionClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="operations-button"
+    stylesheets="@../css/smart_calc.css"
+    text="atan">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="1" GridPane.rowIndex="6" mnemonicParsing="false"
+    onMouseClicked="#onDepositClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="action-button" stylesheets="@../css/smart_calc.css"
+    text="deposit">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.rowIndex="6" mnemonicParsing="false" onMouseClicked="#onCreditClicked"
+    prefHeight="61.0" prefWidth="81.0"
+    styleClass="action-button" stylesheets="@../css/smart_calc.css"
+    text="credit">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="6" GridPane.rowIndex="5"
+    mnemonicParsing="false" onMouseClicked="#onOperatorClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="operations-button"
+    stylesheets="@../css/smart_calc.css"
+    text="-">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="5" GridPane.rowIndex="5"
+    mnemonicParsing="false" onMouseClicked="#onDigitClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="digits-button"
+    stylesheets="@../css/smart_calc.css"
+    text="3">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="4" GridPane.rowIndex="6"
+    mnemonicParsing="false" onMouseClicked="#onDigitClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="digits-button"
+    stylesheets="@../css/smart_calc.css"
+    text="0">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="6" GridPane.rowIndex="4"
+    mnemonicParsing="false" onMouseClicked="#onOperatorClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="operations-button"
+    stylesheets="@../css/smart_calc.css"
+    text="+">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="5" GridPane.rowIndex="4"
+    mnemonicParsing="false" onMouseClicked="#onDigitClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="digits-button"
+    stylesheets="@../css/smart_calc.css"
+    text="6">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="6" GridPane.rowIndex="3"
+    mnemonicParsing="false" onMouseClicked="#onOperatorClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="operations-button"
+    stylesheets="@../css/smart_calc.css"
+    text="×">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="4" GridPane.rowIndex="5"
+    mnemonicParsing="false" onMouseClicked="#onDigitClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="digits-button"
+    stylesheets="@../css/smart_calc.css"
+    text="2">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="4" GridPane.rowIndex="4"
+    mnemonicParsing="false" onMouseClicked="#onDigitClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="digits-button"
+    stylesheets="@../css/smart_calc.css"
+    text="5">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="4" GridPane.rowIndex="3"
+    mnemonicParsing="false" onMouseClicked="#onDigitClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="digits-button"
+    stylesheets="@../css/smart_calc.css"
+    text="8">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="6" GridPane.rowIndex="2"
+    mnemonicParsing="false" onMouseClicked="#onOperatorClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="operations-button"
+    stylesheets="@../css/smart_calc.css"
+    text="÷">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="6" GridPane.rowIndex="6"
+    mnemonicParsing="false" onMouseClicked="#onCalculateClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="action-button"
+    stylesheets="@../css/smart_calc.css"
+    text="=">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="5" GridPane.rowIndex="6"
+    mnemonicParsing="false" onMouseClicked="#onDigitClicked" prefHeight="61.0"
+    prefWidth="81.0" styleClass="digits-button"
+    stylesheets="@../css/smart_calc.css"
+    text=".">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="7" mnemonicParsing="false"
+    onMouseClicked="#onClearHistoryClicked" prefHeight="61.0"
+    prefWidth="81.0"
+    styleClass="operations-button" stylesheets="@../css/smart_calc.css"
+    text=" clear&#10;history" fx:id="cleanHistory">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="8" mnemonicParsing="false"
+    onMouseClicked="#onHelpClicked" prefHeight="61.0" prefWidth="81.0"
+    styleClass="operations-button" stylesheets="@../css/smart_calc.css"
+    text="help">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <Button GridPane.columnIndex="9"
+    mnemonicParsing="false" prefHeight="61.0" prefWidth="81.0"
+    styleClass="operations-button" stylesheets="@../css/smart_calc.css"
+    text="settings">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Button>
+  <ListView style="-fx-font-size: 14pt;" GridPane.columnIndex="7" GridPane.columnSpan="3"
+    GridPane.rowIndex="1" GridPane.rowSpan="6"
+    prefHeight="200.0"
+    prefWidth="320.0" styleClass="history"
+    stylesheets="@../css/smart_calc.css" fx:id="history">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </ListView>
+  <Spinner GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" editable="true"
+    prefHeight="60.0" prefWidth="162.0"
+    styleClass="spinner" stylesheets="@../css/smart_calc.css"
+    fx:id="spinner">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </Spinner>
+  <TextField GridPane.columnSpan="7" alignment="CENTER_RIGHT" prefHeight="60.0"
+    prefWidth="560.0" styleClass="input"
+    stylesheets="@../css/smart_calc.css" fx:id="expression">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </TextField>
+  <TextField GridPane.columnIndex="3" GridPane.columnSpan="4" GridPane.rowIndex="1"
+    alignment="CENTER_RIGHT" editable="false" prefHeight="60.0"
+    prefWidth="320.0" styleClass="result"
+    stylesheets="@../css/smart_calc.css"
+    text="0" fx:id="result">
+    <GridPane.margin>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+    </GridPane.margin>
+  </TextField>
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+  </rowConstraints>
+</GridPane>

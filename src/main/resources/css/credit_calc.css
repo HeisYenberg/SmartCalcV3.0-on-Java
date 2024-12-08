@@ -1,0 +1,75 @@
+.result {
+  -fx-font-family: "Microsoft Sans Serif", serif;
+  -fx-font-weight: bold;
+  -fx-font-size: 20pt;
+  -fx-text-fill: white;
+  -fx-background-color: #323232;
+  -fx-border-width: 0;
+  -fx-background-radius: 5px;
+}
+
+.spinner {
+  -fx-font-family: "Microsoft Sans Serif", serif;
+  -fx-font-weight: bold;
+  -fx-font-size: 18pt;
+  -fx-text-fill: white;
+  -fx-progress-color: white;
+  -fx-background-color: #323232;
+  -fx-border-insets: 0;
+  -fx-border-width: 0;
+  -fx-background-radius: 5px;
+}
+
+.spinner .label {
+  -fx-text-fill: white;
+  -fx-background-radius: 5px;
+}
+
+.spinner .context-menu {
+  -fx-background-color: #323232;
+}
+
+.spinner .menu-item:focused {
+  -fx-background-color: #b5adeb;
+}
+
+.spinner:focused {
+  -fx-background-color: #323232;
+  -fx-border-insets: 0;
+  -fx-border-width: 0;
+}
+
+.spinner .increment-arrow-button, .spinner .decrement-arrow-button {
+  -fx-padding: 0;
+}
+
+.spinner .increment-arrow-button .increment-arrow, .spinner .decrement-arrow-button .decrement-arrow {
+  -fx-padding: 0;
+}
+
+.spinner .text-field {
+  -fx-font-family: "Microsoft Sans Serif", serif;
+  -fx-font-weight: bold;
+  -fx-font-size: 18pt;
+  -fx-text-fill: white;
+  -fx-background-radius: 5px;
+  -fx-background-color: #323232;
+}
+
+.action-button {
+  -fx-font-size: 22px;
+  -fx-font-family: "Microsoft Sans Serif", serif;
+  -fx-background-radius: 5px;
+  -fx-border-width: 0;
+  -fx-background-color: #b5adeb;
+  -fx-text-fill: #2e2c3c;
+}
+
+.action-button:hover {
+  -fx-background-color: #9690c2;
+}
+
+.action-button:pressed {
+  -fx-background-color: #9690c2;
+  -fx-text-fill: #605c7c;
+}

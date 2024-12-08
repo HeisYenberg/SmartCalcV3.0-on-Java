@@ -1,0 +1,10 @@
+sin(sin(sin(21))), 0.676063
+cos(cos(cos(21))), 0.657192
+tan(tan(tan(21))), -1.918398
+asin(asin(asin(0.21))), 0.214835
+acos(acos(1)), 1.570796
+atan(atan(atan(21))), 0.780303
+log(log(log(21))), -0.916127
+ln(ln(ln(21))), 0.107368
+sqrt(sqrt(sqrt(21))), 1.463111
+sin(cos(tan(atan(log(ln(sqrt(21))))))) + acos(asin(0.21)), 2.189994

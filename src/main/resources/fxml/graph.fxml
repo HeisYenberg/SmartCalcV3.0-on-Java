@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.ScatterChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity"
+  maxWidth="-Infinity"
+  minHeight="-Infinity" minWidth="-Infinity" prefHeight="427.0"
+  prefWidth="807.0"
+  styleClass="root" stylesheets="@../css/smart_calc.css"
+  xmlns="http://javafx.com/javafx/8"
+  fx:controller="edu.school21.butterba.smartcalc.view.controllers.GraphController">
+  <Button layoutX="558.0" layoutY="373.0" mnemonicParsing="false"
+    onMouseClicked="#onGraphClicked" prefHeight="40.0" prefWidth="240.0"
+    styleClass="action-button" stylesheets="@../css/smart_calc.css"
+    text="graph"/>
+  <Label alignment="CENTER" layoutX="558.0" layoutY="13.0" prefHeight="35.0"
+    prefWidth="240.0" text="X Max" textFill="WHITE"/>
+  <Label alignment="CENTER" layoutX="558.0" layoutY="88.0" prefHeight="35.0"
+    prefWidth="240.0" text="X Min" textFill="WHITE"/>
+  <Label alignment="CENTER" layoutX="558.0" layoutY="163.0" prefHeight="35.0"
+    prefWidth="240.0" text="Y Max" textFill="WHITE"/>
+  <Label alignment="CENTER" layoutX="558.0" layoutY="238.0" prefHeight="35.0"
+    prefWidth="240.0" text="Y Min" textFill="WHITE"/>
+  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="558.0"
+    layoutY="323.0" prefHeight="40.0" prefWidth="240.0" styleClass="graph"
+    stylesheets="@../css/smart_calc.css" fx:id="expression"/>
+  <ScatterChart alternativeColumnFillVisible="true" layoutX="13.0"
+    layoutY="13.0" legendVisible="false" prefHeight="400.0"
+    prefWidth="533.0" styleClass="graph" stylesheets="@../css/smart_calc.css"
+    fx:id="scatterChart">
+    <xAxis>
+      <NumberAxis minorTickVisible="false" prefHeight="20.0"
+        prefWidth="506.0" side="BOTTOM" tickMarkVisible="false"
+        fx:id="xAxis"/>
+    </xAxis>
+    <yAxis>
+      <NumberAxis minorTickVisible="false" prefHeight="350.0"
+        prefWidth="30.0" side="LEFT" tickMarkVisible="false"
+        fx:id="yAxis"/>
+    </yAxis>
+  </ScatterChart>
+  <Spinner editable="true" layoutX="558.0" layoutY="48.0" prefHeight="40.0"
+    prefWidth="240.0" styleClass="graph-spinner"
+    stylesheets="@../css/smart_calc.css" fx:id="xMax"/>
+  <Spinner editable="true" layoutX="558.0" layoutY="123.0" prefHeight="40.0"
+    prefWidth="240.0" styleClass="graph-spinner"
+    stylesheets="@../css/smart_calc.css" fx:id="xMin"/>
+  <Spinner editable="true" layoutX="558.0" layoutY="198.0" prefHeight="40.0"
+    prefWidth="240.0" styleClass="graph-spinner" stylesheets="@../css/smart_calc.css"
+    fx:id="yMax"/>
+  <Spinner editable="true" layoutX="558.0" layoutY="273.0" prefHeight="40.0"
+    prefWidth="240.0" styleClass="graph-spinner" stylesheets="@../css/smart_calc.css"
+    fx:id="yMin"/>
+</AnchorPane>

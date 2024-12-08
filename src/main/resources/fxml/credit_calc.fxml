@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="427.0"
+  prefWidth="807.0"
+  styleClass="root" stylesheets="@../css/smart_calc.css"
+  xmlns="http://javafx.com/javafx/8"
+  fx:controller="edu.school21.butterba.smartcalc.view.controllers.CreditCalcController">
+  <Button layoutX="15.0" layoutY="323.0" mnemonicParsing="false"
+    onMouseClicked="#onCalculateClicked" prefHeight="70.0" prefWidth="220.0"
+    styleClass="action-button"
+    stylesheets="@../css/credit_calc.css"
+    text="Calculate"/>
+  <ChoiceBox layoutX="239.0" layoutY="240.0" prefHeight="55.0"
+    prefWidth="230.0" styleClass="spinner"
+    stylesheets="@../css/credit_calc.css" fx:id="creditType"/>
+  <Label style="-fx-padding: 0 0 0 10px;" layoutX="487.0" layoutY="305.0" prefHeight="50.0"
+    prefWidth="305.0" styleClass="result" stylesheets="@../css/credit_calc.css"
+    text="0.00" textFill="WHITE"
+    fx:id="overpayment">
+    <font>
+      <Font size="24.0"/>
+    </font>
+  </Label>
+  <Label style="-fx-padding: 0 0 0 10px;" layoutX="487.0" layoutY="365.0" prefHeight="50.0"
+    prefWidth="305.0" styleClass="result" stylesheets="@../css/credit_calc.css"
+    text="0.00" textFill="WHITE"
+    fx:id="totalPayment">
+    <font>
+      <Font size="24.0"/>
+    </font>
+  </Label>
+  <Label layoutX="15.0" layoutY="15.0" prefHeight="55.0" prefWidth="220.0"
+    text="Credit Amount" textFill="WHITE">
+    <font>
+      <Font size="24.0"/>
+    </font>
+  </Label>
+  <Label layoutX="15.0" layoutY="90.0" prefHeight="55.0" prefWidth="220.0"
+    text="Month Term" textFill="WHITE">
+    <font>
+      <Font size="24.0"/>
+    </font>
+  </Label>
+  <Label layoutX="15.0" layoutY="165.0" prefHeight="55.0" prefWidth="220.0"
+    text="Interest Rate" textFill="WHITE">
+    <font>
+      <Font size="24.0"/>
+    </font>
+  </Label>
+  <Label layoutX="15.0" layoutY="240.0" prefHeight="55.0" prefWidth="220.0"
+    text="Credit Type" textFill="WHITE">
+    <font>
+      <Font size="24.0"/>
+    </font>
+  </Label>
+  <Label layoutX="245.0" layoutY="305.0" prefHeight="50.0" prefWidth="220.0"
+    text="Overpayment" textFill="WHITE">
+    <font>
+      <Font size="24.0"/>
+    </font>
+  </Label>
+  <Label layoutX="245.0" layoutY="365.0" prefHeight="50.0" prefWidth="220.0"
+    text="Total Payment" textFill="WHITE">
+    <font>
+      <Font size="24.0"/>
+    </font>
+  </Label>
+  <Label layoutX="487.0" layoutY="15.0" prefHeight="50.0" prefWidth="305.0"
+    text="Monthly Payments" textFill="WHITE">
+    <font>
+      <Font size="24.0"/>
+    </font>
+  </Label>
+  <ListView layoutX="487.0" layoutY="70.0" prefHeight="225.0"
+    prefWidth="305.0" styleClass="spinner"
+    stylesheets="@../css/credit_calc.css" fx:id="monthlyPayments"/>
+  <Spinner editable="true" layoutX="239.0" layoutY="15.0" prefHeight="55.0"
+    prefWidth="230.0" styleClass="spinner"
+    stylesheets="@../css/credit_calc.css" fx:id="creditAmount"/>
+  <Spinner editable="true" layoutX="239.0" layoutY="90.0" prefHeight="55.0"
+    prefWidth="230.0" styleClass="spinner"
+    stylesheets="@../css/credit_calc.css" fx:id="monthTerm"/>
+  <Spinner editable="true" layoutX="239.0" layoutY="165.0" prefHeight="55.0"
+    prefWidth="230.0" styleClass="spinner"
+    stylesheets="@../css/credit_calc.css" fx:id="interestRate"/>
+</AnchorPane>
