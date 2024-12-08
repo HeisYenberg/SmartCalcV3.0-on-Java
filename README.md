@@ -9,7 +9,7 @@
 
 - To run the app locally, use:
   ```shell
-  mvn clean test javafx:run
+  mvn clean install javafx:run
   ```  
 - To view tests, run:
   ```shell
