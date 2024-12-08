@@ -4,7 +4,7 @@
 
 ## Usage
 
-- To install the app on macOS, download the installer from the [Releases](#)
+- To install the app on macOS, download the installer from the [Releases](https://github.com/HeisYenberg/SmartCalcV3.0-on-Java/releases/tag/3.0)
   section on GitHub.
 
 - To run the app locally, use:
